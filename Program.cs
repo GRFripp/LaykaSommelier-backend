@@ -22,13 +22,26 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 var firebaseJson = Environment.GetEnvironmentVariable("FIREBASE_ADMIN_SDK_JSON");
 if (!string.IsNullOrEmpty(firebaseJson))
 {
+    // Пробуем распознать Base64 (если строка не начинается с '{')
+    string jsonContent;
+    if (firebaseJson.TrimStart().StartsWith("{"))
+    {
+        jsonContent = firebaseJson;
+    }
+    else
+    {
+        // Декодируем из Base64
+        var bytes = Convert.FromBase64String(firebaseJson);
+        jsonContent = System.Text.Encoding.UTF8.GetString(bytes);
+    }
     FirebaseApp.Create(new AppOptions
     {
-        Credential = GoogleCredential.FromJson(firebaseJson)
+        Credential = GoogleCredential.FromJson(jsonContent)
     });
 }
 else
 {
+    // Локальная разработка через файл
     FirebaseApp.Create(new AppOptions
     {
         Credential = GoogleCredential.FromFile("firebase-admin-sdk.json")

@@ -19,6 +19,5 @@
 	
 	</ItemGroup>
 	<ItemGroup>
-  <None Include="firebase-admin-sdk.json" CopyToOutputDirectory="PreserveNewest" Condition="'$(Configuration)' == 'Debug'" />
 </ItemGroup>
 </Project>

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LaykaSommelier.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f7a3a4ed2df9956861352ec14a0546eb391d55f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15b0ed7a5c45c5ae63a634581236999723ca1b0e")]
 [assembly: System.Reflection.AssemblyProductAttribute("LaykaSommelier.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LaykaSommelier.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
